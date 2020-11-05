@@ -24,14 +24,12 @@ const connect = function() {
     rl.prompt();
   });
   conn.on('data', (data) => {
+    console.log("---------------");
     process.stdout.write(`${data}\n`);
+    console.log("---------------");
     rl.prompt();
   });
   return conn;
 };
 
 connect();
-
-module.exports =  {
-  connect
-};
